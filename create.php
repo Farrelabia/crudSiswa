@@ -19,31 +19,32 @@
 <body>
   <nav class="navbar navbar-dark bg-dark navbar-expand-lg p-3 mb-5 shadowBg">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#">Tambah Siswa</a>
+      <a class="navbar-brand" href="#">Add Student</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <button onclick="window.location='table_siswa.php'" class="btn btn-outline-warning">kembali</button>
+      <button onclick="window.location='table_siswa.php'" class="btn btn-outline-warning">Back</button>
     </div>
   </nav>
   <div class="border border-dark mx-auto p-5 bg-dark text-white rounded-5" style="max-width: 600px">
     <form action="act_create.php" method="get">
       <div class="mb-2">
-        <label for="" style="width: 150px">Nama Siswa </label>
-        <input type="text" name="nama_siswa" class="w-50">
+        <label for="" style="width: 150px">Student's name  </label>
+        <input type="text" name="nama_siswa" class="w-50" maxlength="25">
       </div>
       <div class="mb-2">
-        <label for="" style="width: 150px">Jenis Kelamin </label>
-        <input type="radio" name="jenis_kelamin" value="laki-laki" class="me-2">Laki-laki
-        <input type="radio" name="jenis_kelamin" value="perempuan" class="mx-2">Perempuan
+        <label for="" style="width: 150px">Gender </label>
+        <input type="radio" name="jenis_kelamin" value="laki-laki" class="me-2">Man
+        <input type="radio" name="jenis_kelamin" value="perempuan" class="mx-2">Woman
       </div>
       <div class="mb-2">
-        <label for="" style="width: 150px">No Telepon </label>
+        <label for="" style="width: 150px">Phone Number </label>
         <input type="tel" name="no_telp" class="w-50">
       </div>
       <br>
-      <button type="submit" class="btn btn-outline-light">Kirim!</button>
+      <label style="width: 150px" for=""></label>
+      <button type="submit" class="btn btn-outline-light">Submit</button>
     </form>
 
   </div>

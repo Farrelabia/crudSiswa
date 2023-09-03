@@ -21,11 +21,11 @@ include('koneksi.php');
 <body>
 <nav class="navbar navbar-dark bg-dark navbar-expand-lg p-3 shadowBg fixed-top" >
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">Table Siswa</a>
+    <a class="navbar-brand" href="#">Student's Table</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <button onclick="window.location='create.php'" class="btn btn-warning">tambah data</button>
+    <button onclick="window.location='create.php'" class="btn btn-warning">Add</button>
   </div>
 </nav>
 
@@ -33,9 +33,9 @@ include('koneksi.php');
   <table border="1" class="table table-dark table-striped container-sm" style="margin-top: 150px">
     <thead>
       <th class="text-center">No</th>
-      <th>Nama</th>
+      <th>Name</th>
       <th>Gender</th>
-      <th>No.telp</th>
+      <th>Phone Number</th>
       <th class="text-center">Action</th>
     </thead>
     <tbody>
@@ -49,8 +49,8 @@ include('koneksi.php');
           <td>$data[jenis_kelamin]</td>
           <td>$data[no_telp]</td>
           <td class='text-center'>
-          <a href='update.php?id=$data[id]' class='btn btn-primary me-3' >update</a>
-          <a href='act_delete_siswa.php?id=$data[id]' class='btn btn-danger'>hapus</a>
+          <a href='update.php?id=$data[id]' class='btn btn-primary me-3' >Update</a>
+          <a href='act_delete_siswa.php?id=$data[id]' class='btn btn-danger'>Delete</a>
           </td>
 
         </tr>";

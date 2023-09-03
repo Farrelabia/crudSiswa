@@ -19,12 +19,12 @@
 <body>
 <nav class="navbar navbar-dark bg-dark navbar-expand-lg p-3 mb-5 shadowBg">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#">Tambah Siswa</a>
+      <a class="navbar-brand" href="#">Update Student</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <button onclick="window.location='table_siswa.php'" class="btn btn-outline-warning">kembali</button>
+      <button onclick="window.location='table_siswa.php'" class="btn btn-outline-warning">Back</button>
     </div>
   </nav>
   <?php
@@ -37,17 +37,19 @@
     <div class="border border-dark mx-auto p-5 bg-dark text-white rounded-5" style="max-width: 600px">
     <form action="act_update_siswa.php" method="POST">
       <input hidden type="text" name="id" value="<?php echo $data['id'] ?>">
-      <label style="width: 150px" for="">nama siswa </label>
-      <input type="text" name="nama_siswa" value="<?php echo $data['nama_siswa'] ?>">
+      <label style="width: 150px" for="">Student's name </label>
+      <input type="text" name="nama_siswa" value="<?php echo $data['nama_siswa'] ?>" class="w-50">
       <br><br>
-      <label style="width: 150px" for="">jenis kelamin </label>
-      <input type="radio" name="jenis_kelamin" value="laki-laki" class="me-2" <?php echo ($data['jenis_kelamin'] == 'laki-laki' ? 'checked=checked' : ''); ?>>Laki-Laki
-      <input type="radio" name="jenis_kelamin" value="perempuan" class="mx-2" <?php echo ($data['jenis_kelamin'] == 'perempuan' ? 'checked=checked' : ''); ?>>Perempuan
+      <label style="width: 150px" for="">Gender </label>
+      <input type="radio" name="jenis_kelamin" value="laki-laki" class="me-2" <?php echo ($data['jenis_kelamin'] == 'laki-laki' ? 'checked=checked' : ''); ?>>Man
+      <input type="radio" name="jenis_kelamin" value="perempuan" class="mx-2" <?php echo ($data['jenis_kelamin'] == 'perempuan' ? 'checked=checked' : ''); ?>>Woman
       <br><br>
-      <label style="width: 150px" for="">No Telepon </label>
-      <input type="tel" name="no_telp" value="<?php echo $data['no_telp'] ?>">
+      <label style="width: 150px" for="">Phone Number </label>
+      <input type="tel" name="no_telp" value="<?php echo $data['no_telp'] ?>" class="w-50">
       <br><br>
-      <button type="submit" class="btn btn-outline-light">UPDATE!</button>
+      
+      <label style="width: 150px" for=""></label>
+      <button type="submit" class="btn btn-outline-light">Update</button>
     </form>
   </div>
   <?php } ?>
